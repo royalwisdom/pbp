@@ -1,0 +1,53 @@
+
+
+
+<div class="wrapper">
+  <div class="nav">
+    <ul>
+      <li data-page="read">read</li>
+      <li data-page="write">write</li>
+      <a href="#"><li data-page="listen">listen</li></a>
+      <a href="#"><li data-page="map">map</li></a>
+      <li><%= link_to "new article", new_article_path %></li>
+    </ul>
+  </div>
+  
+  <div class="content-container">
+    
+    <div class="content" data-page="read">
+      <h2 class="page-header">Reading</h2>
+      <% if !@articles.nil? %>
+	<% @articles.each do |article| %>
+	  <div class="article">
+	    <h3><%= article.title %></h3>
+	    <p><%= article.preview %></p>
+	  </div>
+	<% end %>
+      <% end %>
+      
+      </div>
+    </div>
+
+    <div class="content" data-page="write">
+      <h2 class="page-header">Writing</h2>
+    </div>
+
+    <div class="content" data-page="listen">
+      <h2 class="page-header">Listening</h2>
+    </div>
+    
+    <div class="content" data-page="map">
+      <h2 class="page-header">Map</h2>
+      <div class="gmap">
+      <iframe
+        class="iframe"
+        frameborder="0" 
+        style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBrm5bfxWLYBr3YCH-VB2PHGqwHWR1kjMg&q=?"
+        allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+    
+  </div>
+</div>
