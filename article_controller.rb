@@ -1,3 +1,0 @@
-ArticleController < ApplicationController
-
-end
