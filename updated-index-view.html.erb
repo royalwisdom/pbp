@@ -1,0 +1,8 @@
+<% if overlord_signed_in? %>
+  <%= render "partials/overlord_nav" %>
+<% elseif underling_signed_in? %>
+  <%= render "partials/underling_nav" %>
+<% else %>
+  <%= render "partials/guest_navigation"
+<% end %>
+<%= render "partials/articles_index" %>
