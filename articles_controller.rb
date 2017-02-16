@@ -2,18 +2,6 @@ class ArticlesController < ApplicationController
  
   def index
     @articles = Article.all
-    #@article_previews = []
-   
-    #@articles.each do |article|
-    #  i = 0
-    #  preview = []
-    # full_text = article.text.split(' ')
-    #  while i < 100 do
-	#preview << full_text[i]
-      #end
-      #@article_previews << preview
-    #end
-    
     render 'articles/index_articles'
   end
   
